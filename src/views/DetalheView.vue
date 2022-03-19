@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <v-card :loading="loading" class="mx-auto my-12" max-width="680px">
+    <v-card class="mx-auto my-12" max-width="680px">
       <template slot="progress">
         <v-progress-linear
           color="deep-purple"
@@ -41,11 +41,7 @@
       <v-card-title>Tonight's availability</v-card-title>
 
       <v-card-text>
-        <v-chip-group
-          v-model="selection"
-          active-class="deep-purple accent-4 white--text"
-          column
-        >
+        <v-chip-group active-class="deep-purple accent-4 white--text" column>
           <v-chip>5:30PM</v-chip>
 
           <v-chip>7:30PM</v-chip>
@@ -57,12 +53,10 @@
       </v-card-text>
 
       <v-card-actions>
-        <v-btn color="deep-purple lighten-2" text @click="reserve">
-          Reserve
-        </v-btn>
+        <v-btn color="deep-purple lighten-2" text> Reserve </v-btn>
       </v-card-actions>
     </v-card>
-    <v-card :loading="loading" class="mx-auto my-12" max-width="680px">
+    <v-card class="mx-auto my-12" max-width="680px">
       <div class="mapouter">
         <div class="gmap_canvas">
           <iframe
@@ -93,6 +87,7 @@ export default {
     fetch("https://it3-hbn-default-rtdb.firebaseio.com/carnaval.json")
       .then((response) => response.json())
       .then((json) => {
+        console.log("route id: ", this.$route.params.id);
         this.blocoObject = json.filter(
           (el) => this.$route.params.id == el.name
         );
