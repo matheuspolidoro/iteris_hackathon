@@ -1,14 +1,16 @@
 <template>
     <v-container>
-        <h2 class="text-h5 text-center mb-3 mt-5">Carnaval Remoto</h2>
-        
-        <v-img class="carnaval-img  "  src="../assets/carna.png" alt="Carnaval de Rua"></v-img>
-        
-        <p> Blocos de carnaval são conjuntos de pessoas que vão as ruas na época do Carnaval 
-            (durante, antes ou pouco depois do evento) de forma mais ou menos organizada. 
-            Geralmente, os blocos carnavalescos percorrem trajetos urbanos definidos 
-            (ruas e avenidas principais das cidades).
+        <div class="titulo-carnaval">
+            <h2 class="text-h5 text-center mb-3 mt-5">Carnaval na Pandemia</h2>
+        </div>
+        <v-img class="carnaval-img"  src="../assets/carnaval.png" alt="Carnaval de Rua"></v-img>
+
+        <div class="intro-carnaval">        
+            <p>Ajudamos pessoas a encontrarem blocos de carnaval espalhados por todo Brasil. 
+            Diminuimos a distância entre os foliôes e a folia através  de uma tela de video. 
+            Pegue a sua fantasia e venha pular carnaval sem sair de casa. 
             </p>
+        </div>    
     </v-container>
 </template>
 
@@ -22,7 +24,17 @@ export default {
 .carnaval-img{
     height: 250px;
     border-radius: 10px;
+    margin-bottom: 80px;
 }
-    
+.intro-carnaval {
+    display: flex;
+    text-align: center;
+
+}  
+.titulo-carnaval {
+    color: yellow;
+    margin-bottom: 30px;
+}  
+
 </style>
 
