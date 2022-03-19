@@ -20,6 +20,14 @@ export default {
 </script>
 
 <style>
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+* {
+  font-family: "Ubuntu", sans-serif !important;
+}
+  #app {
+    background-size: cover;
+    background-color: rgb(238, 237, 220);
+  }
 .link-home {
   color: white !important;
   text-decoration: none;
