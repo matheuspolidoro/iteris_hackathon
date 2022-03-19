@@ -1,21 +1,23 @@
 <template>
   <v-container>
-    <h2>Circuitos</h2>
-    <ListaCircuitos/>
+    <h3 class="text-center">CIRCUITOS</h3>
+
+    <ListaCircuitos />
   </v-container>
 </template>
 
 <script>
-import ListaCircuitos from '../components/ListaCircuitos.vue';
+import ListaCircuitos from "../components/ListaCircuitos.vue";
 
 export default {
-  name: 'MeusCircuitos',
+  name: "MeusCircuitos",
   components: {
-    ListaCircuitos
+    ListaCircuitos,
   },
   data() {
-    return {
-    }
+    return {};
   },
-}
+};
 </script>
+
+<style scoped></style>

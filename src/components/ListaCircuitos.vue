@@ -1,13 +1,22 @@
 <template>
-  <div class="Circuitos">
-    <h2>Circuitos</h2>
-    <ul>
-      <li v-for="circuitos of listaCircuitos" :key="circuitos.name">
-        <router-link :to="urlCircuito">
-          <h2>{{ circuitos.name }}</h2>
-        </router-link>
+  <div class="circuitos">
+    <!-- <ul>
+      <li v-for="circuito of listaCircuitos" :key="circuito.name">
+        <h2 @click="navigateToBloco(circuito.name)">{{ circuito.name }}</h2>
       </li>
-    </ul>
+    </ul> -->
+    <v-card class="mx-auto" max-width="450" tile>
+      <v-list nav dense>
+        <v-subheader>Circuitos</v-subheader>
+        <v-list-item-group v-model="listaCircuitos" color="primary">
+          <v-list-item link v-for="(circuito, i) in listaCircuitos" :key="i">
+            <v-list-item-content @click="navigateToBloco(circuito.name)">
+              <v-list-item-title v-text="circuito.name"></v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+        </v-list-item-group>
+      </v-list>
+    </v-card>
   </div>
 </template>
 
@@ -20,16 +29,27 @@ export default {
       urlCircuito: "bloco/",
     };
   },
+  methods: {
+    navigateToBloco: function (name) {
+      this.$router.push("bloco/" + name);
+    },
+  },
   created() {
     fetch("https://it3-hbn-default-rtdb.firebaseio.com/carnaval.json")
-      .then((response) => response.json())
+      .then((response) => {
+        return response.json();
+      })
       .then((json) => {
         this.listaCircuitos = json;
-        this.urlCircuito = this.urlCircuito + json.name;
-        console.log("Resposta API: ", json);
       });
   },
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+a {
+  list-style: none;
+  text-decoration: none;
+  color: black;
+}
+</style>
