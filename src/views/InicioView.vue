@@ -32,7 +32,7 @@ export default {
 
 }  
 .titulo-carnaval {
-    color: yellow;
+    color: black;
     margin-bottom: 30px;
 }  
 
