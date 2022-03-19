@@ -22,11 +22,8 @@
             </v-list-item>
           </router-link>
 
-<<<<<<< HEAD
-          <router-link to="/Circuitos Carnaval">
-=======
+          <!-- <router-link to="/Circuitos Carnaval" /> -->
           <router-link to="/Entrar">
->>>>>>> main
             <v-list-item>
               <v-list-item-icon>
                 <v-icon>mdi-account</v-icon>

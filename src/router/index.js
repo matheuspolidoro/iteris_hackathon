@@ -1,12 +1,9 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import HomeView from "../views/HomeView.vue";
-<<<<<<< HEAD
 import DetalheView from "../views/DetalheView.vue";
 
-=======
 import Entrar from "../views/Entrar.vue";
->>>>>>> main
 Vue.use(VueRouter);
 
 const routes = [
@@ -16,15 +13,14 @@ const routes = [
     component: HomeView,
   },
   {
-<<<<<<< HEAD
-    path: "/:id",
+    path: "/bloco/:id",
     name: "bloco",
     component: DetalheView,
-=======
+  },
+  {
     path: "/entrar",
     name: "entrar",
     component: Entrar,
->>>>>>> main
   },
 ];
 
