@@ -22,12 +22,12 @@
             </v-list-item>
           </router-link>
 
-          <router-link to="/classificacao">
+          <router-link to="/Entrar">
             <v-list-item>
               <v-list-item-icon>
                 <v-icon>mdi-account</v-icon>
               </v-list-item-icon>
-              <v-list-item-title> Classificação </v-list-item-title>
+              <v-list-item-title> Entrar </v-list-item-title>
             </v-list-item>
           </router-link>
         </v-list-item-group>
