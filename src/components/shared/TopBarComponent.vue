@@ -22,7 +22,7 @@
             </v-list-item>
           </router-link>
 
-          <router-link to="/classificacao">
+          <router-link to="/Circuitos Carnaval">
             <v-list-item>
               <v-list-item-icon>
                 <v-icon>mdi-account</v-icon>
