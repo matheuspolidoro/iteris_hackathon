@@ -2,7 +2,7 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import Entrar from "../views/Entrar.vue";
 import InicioView from "../views/InicioView.vue";
-
+import RegistroForm from '../views/registro/RegistroForm';
 Vue.use(VueRouter);
 
 const routes = [{
@@ -15,6 +15,12 @@ const routes = [{
         name: "inicio",
         component: InicioView,
     },
+    {
+      path: "/registro",
+      name: "registroForm",
+      component: RegistroForm,
+    }
+  
 ];
 
 
