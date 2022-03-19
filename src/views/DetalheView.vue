@@ -86,21 +86,24 @@ export default {
   data: function () {
     return {
       bloco_map_url: "",
-      blocoObject: {
-        address: "Salvador - BA",
-        description:
-          "Considerado um dos mais antigos blocos de Salvador, o bloco Mudança do Garcia existe há 82 anos e sai de um dos circuitos oficiais do carnaval, o Circuito Osmar. A agremiação se destaca pelos protestos realizados pelos foliões durante o cortejo. Com faixas, cartazes e fantasias tratando de assuntos como política, educação e saúde os foliões saem pelas ruas do Campo Grande dançando, fazendo brincadeiras e gritando palavras de ordem.",
-        name: "Mudança do Garcia",
-        photo:
-          "https://www.correio24horas.com.br/fileadmin/_processed_/2/d/csm_faixa_carnaval_de1dfb906e.jpg",
-      },
+      blocoObject: {},
     };
   },
   created: function () {
-    console.log("bloco é: " + this.blocoObject);
-    this.bloco_map_url =
+    fetch("https://it3-hbn-default-rtdb.firebaseio.com/carnaval.json")
+      .then((response) => response.json())
+      .then((json) => {
+        this.blocoObject = json.filter(
+          (el) => this.$route.params.id == el.name
+        );
+        console.log("bloco é: " + this.blocoObject);
+      });
+
+    this.blocoObject = this.bloco_map_url =
       "https://maps.google.com/maps?q=" +
-      "Juiz de Fora" +
+      this.blocoObject.address +
+      " bloco " +
+      this.blocoObject.name +
       "&t=&z=13&ie=UTF8&iwloc=&output=embed";
   },
 };

@@ -1,32 +1,30 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import HomeView from "../views/HomeView.vue";
-import DetalheView from "../views/DetalheView.vue";
+// import Inicio from "../views/Inicio.vue";
+import Circuitos from "../views/Circuitos";
+import DetalheView from "../views/DetalheView";
 
-import Entrar from "../views/Entrar.vue";
 Vue.use(VueRouter);
 
 const routes = [
-  {
-    path: "/",
-    name: "home",
-    component: HomeView,
-  },
+  // {
+  //   path: "/",
+  //   name: "Inicio",
+  //   component: Inicio,
+  // },
   {
     path: "/bloco/:id",
     name: "bloco",
     component: DetalheView,
   },
   {
-    path: "/entrar",
-    name: "entrar",
-    component: Entrar,
+    path: "/circuitos",
+    name: "Circuitos",
+    component: Circuitos,
   },
 ];
 
 const router = new VueRouter({
-  mode: "history",
-  base: process.env.BASE_URL,
   routes,
 });
 

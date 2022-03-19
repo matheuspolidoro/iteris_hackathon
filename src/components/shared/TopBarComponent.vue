@@ -22,13 +22,12 @@
             </v-list-item>
           </router-link>
 
-          <!-- <router-link to="/Circuitos Carnaval" /> -->
-          <router-link to="/Entrar">
+          <router-link to="/circuitos">
             <v-list-item>
               <v-list-item-icon>
                 <v-icon>mdi-account</v-icon>
               </v-list-item-icon>
-              <v-list-item-title> Entrar </v-list-item-title>
+              <v-list-item-title> Circuitos Carnaval </v-list-item-title>
             </v-list-item>
           </router-link>
         </v-list-item-group>
