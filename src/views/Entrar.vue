@@ -12,6 +12,9 @@
                                                 <v-text-field label="Email" name="Email" type="text" color="yellow accent-3" :rules="emailRules" required/>
                                                 <v-text-field label="Password" name="Password" type="password" color="yellow accent-3"/>
                                             </v-form>
+                                            <div class="text-center mt-3 mb-3">
+                                                <v-btn class="mb-3" @click="entrar" rounded color="yellow accent-3">Entrar</v-btn>    
+                                            </div>
                                         </v-col>
                                     </v-row>
                                 </v-window-item>  
@@ -28,5 +31,8 @@
          data: () => ({
             emailRules: [ v => !v || /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(v) || 'E-mail deve ser válido']
         }),
+         methods:{
+        entrar() {this.$router.push({ name: "" });},
+        },
     }
 </script>
