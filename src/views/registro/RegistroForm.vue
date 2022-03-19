@@ -6,14 +6,14 @@
                             <v-window v-model="step">
                                 <v-window-item :value="1">
                                     <v-row>
-                                        <v-col>
+                                        <v-col class="mb-3">
                                            <h1 class="text-center display-2 yellow--text text--accent-3">Entre nesse carnaval!</h1>
                                             <v-form>
                                                 <v-text-field label="Email" name="Email" type="text" color="yellow accent-3" :rules="emailRules" required/>
                                                 <v-text-field label="Senha" name="Password" type="password" color="yellow accent-3"/>
                                                 <v-text-field label="Repita a senha" name="repitaPassword" type="password" color="yellow accent-3"/>
                                                 <div class="bota">
-                                                    <v-btn class="botao" rounded color="yellow"> Registrar </v-btn> 
+                                                    <v-btn class="botao"  @click="cadastrar" rounded color="yellow"> Registrar </v-btn> 
                                                 </div>
                                             </v-form>
                                         </v-col>
@@ -33,8 +33,7 @@
             emailRules: [ v => !v || /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(v) || 'E-mail deve ser válido'],
         }),
          methods:{
-        entrar() {this.$router.push({ name: "" });},
-        cadastrar(){this.$router.push({ name: "" });}
+        cadastrar(){this.$router.push({ name: "Circuitos" });}
         },
     }
 </script>

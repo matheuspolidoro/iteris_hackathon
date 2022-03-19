@@ -19,7 +19,9 @@ const routes = [
     name: "Circuitos",
     component: Circuitos,
   },
-  { path: "/entrar", name: "entrar", component: Entrar },
+  { path: "/entrar", 
+    name: "entrar", 
+    component: Entrar },
   {
     path: "/",
     name: "inicio",

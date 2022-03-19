@@ -33,8 +33,8 @@
             emailRules: [ v => !v || /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(v) || 'E-mail deve ser válido']
         }),
          methods:{
-        entrar() {this.$router.push({ name: "" });},
-        cadastrar(){this.$router.push({ name: "" });}
+        entrar() {this.$router.push({ name: "Circuitos" });},
+        cadastrar(){this.$router.push({ name: "registroForm" });}
         },
     }
 </script>
