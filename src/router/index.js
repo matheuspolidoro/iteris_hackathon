@@ -1,6 +1,7 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import HomeView from "../views/HomeView.vue";
+import RegistroForm from '../views/registro/RegistroForm'
 
 Vue.use(VueRouter);
 
@@ -10,6 +11,11 @@ const routes = [
     name: "home",
     component: HomeView,
   },
+  {
+    path: "/registro",
+    name: "registroForm",
+    component: RegistroForm,
+  }
 ];
 
 const router = new VueRouter({
